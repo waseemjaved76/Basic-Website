@@ -15,15 +15,58 @@
 body {
   margin: 0;
   min-height: 100vh;
-  display: grid;
-  place-items: center;
   background: linear-gradient(135deg, var(--bg), #1e293b);
   color: var(--text);
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(15, 23, 42, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: var(--accent);
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.nav-links a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: var(--accent);
+}
+
+.account-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  text-decoration: none;
+  font-size: 1.1rem;
 }
 
 .container {
   width: min(1000px, 90vw);
   padding: 2rem;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
 }
 
 .hero {
@@ -100,6 +143,15 @@ button:hover {
 }
 
 @media (max-width: 700px) {
+  .topbar {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    gap: 0.7rem;
+    font-size: 0.95rem;
+  }
+
   .cards {
     grid-template-columns: 1fr;
   }
